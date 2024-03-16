@@ -22,15 +22,6 @@ html {
   font-style: normal;
 }
 
-body {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 300;
-  color: #444;
-  line-height: 1.9;
-  background-color: #f3f3f3;
-  height: 100vh;
-}
-
 .font {
   color: #a9a8b6;
   font-size: 20px;
@@ -40,6 +31,15 @@ body {
 .font1 {
   color: #f60515;
   font-size: 39.8px;
+}
+
+body {
+  font-family: "DM snas", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+  height: 100vh;
 }
 
 .main-header {
@@ -78,6 +78,7 @@ body {
 
 .phone:hover {
   text-decoration: underline;
+
   cursor: pointer;
 }
 
