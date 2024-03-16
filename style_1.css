@@ -78,7 +78,6 @@ body {
 
 .phone:hover {
   text-decoration: underline;
-
   cursor: pointer;
 }
 
@@ -130,7 +129,7 @@ body {
   a {
     text-decoration: none;
     color: #67666e;
-    transition: font-size 0.2s, color 0.3s; /* Add transition properties */
+    transition: font-size 0.3s, color 0.3s; /* Add transition properties */
   }
 
   a:hover {
