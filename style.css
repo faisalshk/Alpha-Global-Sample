@@ -321,6 +321,7 @@ body {
   flex-direction: column;
   background-color: white;
   border-radius: 8px;
+  box-shadow: 10px 10px 20px rgb(203, 202, 202);
 
   img {
     border-radius: 8px;
@@ -465,7 +466,7 @@ body {
 .partner {
   padding: 20px 20px;
   width: 100%;
-  height: 300px;
+  height: 250px;
   background-color: #f60515;
   display: flex;
   justify-content: space-evenly;
@@ -580,4 +581,223 @@ body {
   width: auto;
   height: 718px;
   background-color: #0169c8;
+  display: flex;
+  gap: 30px;
+  position: relative;
+
+  .map {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .benefits_img {
+    z-index: 1;
+    width: 800px;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+    img {
+      width: 750px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0 8px 0 0;
+    }
+
+    .red-line {
+      width: 12px;
+      height: 470px;
+      background-color: #f60515;
+      border-radius: 0 6px 6px 0;
+    }
+  }
+
+  .benefits_details {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    width: 600px;
+  }
+
+  .head-text {
+    z-index: 1;
+    h3 {
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      line-height: 30px;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 45px;
+      color: white;
+      font-weight: bold;
+      line-height: 60px;
+    }
+  }
+  .other-text {
+    z-index: 1;
+    width: 500px;
+    p {
+      font-size: 18px;
+      color: #9fa4b7;
+      font-weight: normal;
+    }
+  }
+
+  .benefits-list {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    .list-details {
+      width: 430px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h3 {
+        color: white;
+        font-size: 20px;
+        font-weight: normal;
+      }
+      p {
+        font-size: 18px;
+        font-weight: normal;
+        color: #9fa4b7;
+      }
+    }
+  }
+}
+
+/* footer */
+.footer {
+  width: auto;
+  height: 600px;
+  background-color: #e5f7f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.footer-content {
+  width: auto;
+  height: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+  .footer-details {
+    width: 350px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+
+    p {
+      font-size: 15px;
+      color: black;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: flex-start;
+
+      .detail1 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          color: #787780;
+        }
+      }
+    }
+  }
+
+  .footer-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    height: fit-content;
+
+    h3 {
+      color: black;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .footer_links {
+      margin-top: 10px;
+      list-style: none;
+      .link_item {
+        padding: 10px 10px;
+      }
+      a {
+        font-size: 15px;
+        color: #787780;
+        font-weight: 600;
+        line-height: 34px;
+      }
+    }
+  }
+
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    input {
+      width: 370px;
+      height: 65px;
+      background-color: #292837;
+      border-radius: 8px;
+      text-align: center;
+      border: none;
+    }
+
+    input:focus {
+      color: white;
+    }
+
+    button {
+      width: 370px;
+      height: 65px;
+      background-color: #f60515;
+      border-radius: 8px;
+      text-align: center;
+      color: white;
+      border: none;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+
+    p {
+      color: #787780;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
+
+.footer-bottom {
+  width: 90%;
+  height: 100px;
+  background-color: whitesmoke;
 }
