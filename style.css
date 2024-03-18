@@ -9,6 +9,10 @@ html {
   box-sizing: border-box;
 }
 
+.hidden {
+  display: none;
+}
+
 .island-moments-regular {
   font-family: "Island Moments", cursive;
   font-weight: 400;
@@ -22,6 +26,15 @@ html {
   font-style: normal;
 }
 
+body {
+  font-family: "DM snas", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+  height: 100vh;
+}
+
 .font {
   color: #a9a8b6;
   font-size: 20px;
@@ -31,15 +44,6 @@ html {
 .font1 {
   color: #f60515;
   font-size: 39.8px;
-}
-
-body {
-  font-family: "DM snas", sans-serif;
-  font-weight: 300;
-  color: #444;
-  line-height: 1.9;
-  background-color: #f3f3f3;
-  height: 100vh;
 }
 
 .main-header {
@@ -141,6 +145,10 @@ body {
   }
 }
 
+.menu {
+  display: none;
+}
+
 /* slider */
 
 .slider {
@@ -153,8 +161,9 @@ body {
 
 .slider .slider_img {
   width: 100%; /* Set the width of the image to 100% of its container */
-  height: auto; /* Maintain the aspect ratio of the image */
+  height: 100%; /* Maintain the aspect ratio of the image */
   filter: brightness(30%);
+  object-fit: cover;
 }
 
 .arrow {
@@ -201,7 +210,7 @@ body {
 
 /* plan your trip section */
 .section {
-  padding: 6rem 3rem;
+  padding: 4rem 2rem;
   /* border-top: 1px solid #ddd; */
   transition: transform 1s, opacity 1s;
 }
@@ -212,8 +221,8 @@ body {
 }
 
 .section__title {
-  max-width: 80rem;
-  margin: auto 8rem auto;
+  max-width: 60rem;
+  /* margin: auto; */
 }
 
 .section__description {
@@ -230,7 +239,7 @@ body {
 .flex {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
 }
 
 .margin-top {
@@ -284,17 +293,19 @@ body {
 
 .offerings-img {
   margin: auto; /* Center the grid horizontally */
-  margin-top: 5rem;
+  margin-top: 3rem; /* Adjusted margin-top for responsiveness */
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns in each row */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(500px, 1fr)
+  ); /* Adjusted grid layout for responsiveness */
   grid-template-rows: auto; /* Automatically adjust row height */
-  gap: 10px;
+  gap: 20px; /* Adjusted gap between images */
 }
 
 .img-div {
-  width: 100%; /* Ensure each div takes up the entire width of its grid cell */
-  height: 100%; /* Ensure each div takes up the entire height of its grid cell */
-  overflow: hidden; /* Hide any overflow to prevent distortion */
+  border-radius: 20px;
+  overflow: hidden; /* Hide overflow for rounded corners */
 }
 
 .img-div img {
@@ -603,7 +614,7 @@ body {
     align-items: center;
 
     img {
-      width: 750px;
+      width: 650px;
       height: 100%;
       object-fit: cover;
       border-radius: 0 8px 0 0;
@@ -618,6 +629,7 @@ body {
   }
 
   .benefits_details {
+    margin-top: 10px;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -846,5 +858,1417 @@ body {
     img {
       height: 30px;
     }
+  }
+}
+
+/* responsive code */
+
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+  .main-header {
+    height: 90px; /* Adjust header height */
+  }
+
+  .blue-header {
+    height: 35px; /* Adjust blue header height */
+  }
+
+  .detail {
+    width: 400px; /* Adjust width */
+    height: auto;
+    margin-left: 100px; /* Adjust left margin */
+  }
+
+  .icon-btn {
+    height: 35px; /* Setting the height same as .blue-header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .funBtn {
+    width: 250px; /* Adjust button width */
+    height: 100%;
+    padding: 8px 12px; /* Adjust button padding */
+    font-size: 10px; /* Adjust button font size */
+  }
+
+  .nav {
+    margin-left: 100px; /* Adjust left margin */
+    gap: 150px; /* Adjust gap between items */
+    height: auto;
+  }
+
+  .logo img {
+    width: 100px; /* Adjust logo width */
+    height: 55px; /* Maintain aspect ratio */
+  }
+
+  /* hero section */
+  .slider {
+    height: 600px; /* Adjusted height */
+
+    .slider_img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .head {
+    font-size: 80px; /* Adjusted font size */
+    width: 500px; /* Adjusted width */
+    height: 100px; /* Adjusted height */
+  }
+
+  .sub_head {
+    font-size: 30px; /* Adjusted font size */
+  }
+
+  /* plan you trip */
+  .section__title {
+    max-width: 40rem; /* Further reduced max-width for smaller screens */
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .margin-top {
+    margin-top: 5rem; /* Adjusted margin for shorter screens */
+
+    p {
+      font-size: 3rem;
+    }
+  }
+
+  .section__title {
+    max-width: 40rem; /* Further reduced max-width for smaller screens */
+  }
+
+  .section__description {
+    font-size: 3rem; /* Adjusted font size for smaller screens */
+  }
+
+  .section__header {
+    font-size: 3rem; /* Adjusted font size for smaller screens */
+  }
+
+  .check_list_desc {
+    font-size: 1.2rem; /* Adjusted font size for smaller screens */
+  }
+
+  button {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+  }
+
+  /* our offerings */
+  .section__title_1 {
+    margin-top: 2rem; /* Adjusted margin-top for responsiveness */
+  }
+
+  .section__header {
+    font-size: 2rem;
+  }
+
+  /* benefits section */
+  .benefits_section {
+    .benefits_details {
+      margin-top: 20px;
+      gap: 25px;
+      .head-text {
+        h3 {
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer-content {
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 1366px) {
+  .main-header {
+    height: 120px; /* Adjust height for smaller screens */
+    .blue-header {
+      width: auto;
+      background-color: #0169c8;
+      height: 44px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .detail {
+      margin-left: 0; /* Remove left margin for smaller screens */
+      width: 50%; /* Set width to full for smaller screens */
+      justify-content: space-around; /* Adjust spacing for smaller screens */
+      gap: 10px; /* Adjust gap between items for smaller screens */
+    }
+
+    .phone:hover {
+      border-bottom: 1px solid gray;
+    }
+
+    .icon-btn {
+      gap: 10px; /* Adjust gap between items for smaller screens */
+    }
+
+    .funBtn {
+      width: auto; /* Set width to auto for smaller screens */
+      padding: 10px 20px; /* Adjust padding for smaller screens */
+      font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .nav {
+      margin-left: 0;
+      gap: 50px;
+      justify-content: space-around;
+
+      .nav__links {
+        width: auto; /* Set width to auto for smaller screens */
+        gap: 20px; /* Adjust gap between items for smaller screens */
+        a {
+          font-size: 14px;
+        }
+
+        a:hover {
+          font-size: 16px;
+          font-style: bold;
+          color: #0169c8;
+          cursor: pointer;
+        }
+      }
+
+      .nav__item {
+        font-size: 14px; /* Adjust font size for smaller screens */
+      }
+    }
+  }
+
+  .slider {
+    height: 500px;
+
+    .head {
+      font-size: 80px;
+    }
+    .sub_head {
+      margin-top: 5px;
+      font-size: 24px;
+    }
+  }
+
+  .section {
+    overflow: hidden;
+  }
+
+  .section__img {
+    height: 400px;
+    width: 350px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .margin-top {
+    margin-top: 2rem;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .welcome-section {
+    height: 650px;
+  }
+
+  .seperator {
+    margin-top: 0;
+  }
+
+  .welcome-img {
+    margin-top: 25px;
+    width: 500px;
+    height: 250px;
+  }
+
+  .welcome-text {
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .partner {
+    height: 160px;
+  }
+
+  .reviews-container {
+    width: 100%;
+    .reviews {
+      height: auto;
+      .reviews_text {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .benefits_section {
+    height: 550px;
+
+    .benefits_img {
+      width: 400px;
+      img {
+        width: 300px;
+      }
+    }
+
+    .benefits_details {
+      gap: 10px;
+
+      .head-text {
+        h3 {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    gap: 10px;
+    justify-content: start;
+    align-items: normal;
+    height: auto;
+    .footer-content {
+      gap: 12px;
+      height: auto;
+
+      .subscribe {
+        input {
+          width: 300px;
+          height: 50px;
+        }
+        button {
+          width: 300px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .slider_img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Adjustments for responsiveness */
+  .reviews-container {
+    justify-content: center; /* Adjust alignment */
+    align-items: center;
+    overflow: hidden;
+    margin-top: 40px; /* Reduce top margin for smaller screens */
+
+    .reviews {
+      width: 25%; /* Adjusted width for responsiveness */
+      height: auto; /* Allow height to adjust based on content */
+    }
+
+    .reviews_text {
+      padding: 30px; /* Adjusted padding for smaller screens */
+      font-size: 14px; /* Adjusted font size for the reviews text */
+    }
+
+    .reviews_text span {
+      font-size: 16px; /* Adjusted font size for review stars */
+    }
+
+    .reviews_text p {
+      font-size: 14px; /* Adjusted font size for review text */
+    }
+
+    .reviews_text h3 {
+      font-size: 16px; /* Adjusted font size for reviewer name */
+    }
+
+    .reviews_text h4 {
+      font-size: 12px; /* Adjusted font size for reviewer role */
+    }
+  }
+
+  /* benefits section */
+
+  .benefits_section {
+    width: auto;
+
+    .benefits_img {
+      width: 500px;
+      img {
+        width: 400px;
+      }
+    }
+
+    .benefits_details {
+      .head-text {
+        h3 {
+          font-size: 20px;
+        }
+        h2 {
+          font-size: 24px;
+        }
+      }
+      .other-text {
+        p {
+          font-size: 16px;
+        }
+      }
+
+      .benefits-list {
+        .list-details {
+          h3 {
+            font-size: 16px;
+            font-weight: bold;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  /* footer */
+
+  .footer {
+    height: auto; /* Adjust height for smaller screens */
+
+    .footer-content {
+      flex-direction: row; /* Adjust layout for smaller screens */
+      align-items: center; /* Center content for smaller screens */
+      gap: 30px; /* Adjust gap for smaller screens */
+    }
+
+    .footer-details {
+      width: auto; /* Adjust width for smaller screens */
+      text-align: center; /* Center text for smaller screens */
+      align-items: center; /* Center items for smaller screens */
+      gap: 10px; /* Adjust gap for smaller screens */
+
+      p {
+        font-size: 10px; /* Adjust font size for smaller screens */
+      }
+
+      .contact-details {
+        .detail1 {
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .footer-link {
+      /* Styles for footer links */
+      h3 {
+        font-size: 18px;
+      }
+      .footer_links {
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .subscribe {
+      /* Styles for subscription section */
+      input {
+        width: 300px;
+        height: 50px;
+      }
+      button {
+        width: 300px;
+        height: 50px;
+      }
+    }
+
+    .footer-bottom {
+      height: 80px; /* Adjust height for smaller screens */
+    }
+
+    .icon img {
+      width: 20px; /* Adjust icon width for smaller screens */
+      height: 20px; /* Adjust icon height for smaller screens */
+    }
+  }
+}
+
+/* Existing CSS styles */
+
+/* Media query for responsiveness */
+
+@media screen and (max-width: 375px) and (max-height: 800px) {
+  .main-header {
+    min-height: 50px; /* Adjust height for smaller screens */
+    width: auto;
+
+    .blue-header {
+      height: 30px; /* Adjust height for smaller screens */
+      flex-direction: row; /* Stack items vertically for smaller screens */
+      gap: 10px; /* Adjust gap between items for smaller screens */
+      padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .detail {
+      min-width: 70%;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone {
+      font-size: 9px; /* Adjust font size for smaller screens */
+      gap: 5px;
+      img {
+        height: 15px;
+      }
+    }
+
+    .icon-btn {
+      .icons {
+        display: none;
+      }
+      gap: 4px; /* Adjust gap between items for smaller screens */
+      .funBtn {
+        display: none;
+      }
+    }
+
+    .nav {
+      margin-left: 0; /* Remove left margin for smaller screens */
+      gap: 100px; /* Adjust gap between items for smaller screens */
+      align-items: center;
+
+      .logo {
+        margin-top: 10px;
+        width: 100px;
+      }
+    }
+
+    .menu {
+      display: block;
+    }
+
+    .nav__links {
+      display: none;
+    }
+  }
+
+  .slider {
+    height: auto; /* Set slider height to auto */
+  }
+
+  .slider_img {
+    height: 100%; /* Set slider image height to 100% */
+  }
+
+  .hero_text {
+    top: 40%;
+    width: 100%;
+
+    .head {
+      width: 100%;
+      font-size: 50px;
+      height: 70px;
+    }
+    .sub_head {
+      font-size: 15px;
+    }
+  }
+
+  .section__description {
+    font-size: 2rem;
+  }
+
+  .section__header {
+    font-size: 1.5rem;
+  }
+
+  .section__title p {
+    font-size: 0.8rem;
+  }
+
+  .margin-top span {
+    font-size: 10px;
+  }
+
+  .margin-top button {
+    color: white;
+    padding: 10px 10px;
+    background-color: #f60515;
+    border-radius: 8px;
+    width: 100px;
+    height: 29px;
+    border-style: none;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: normal;
+  }
+  .section__img {
+    display: none;
+  }
+
+  .offerings-img {
+    margin: auto;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
+    gap: 10px;
+    width: auto;
+  }
+
+  .card-container {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  .dots-container {
+    margin-top: 10px;
+  }
+  .dots {
+    width: 10px;
+    height: 10px;
+  }
+  .dots-active {
+    width: 8px;
+    height: 8px;
+  }
+
+  .welcome-img {
+    display: none;
+  }
+
+  .welcome-text {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  .seperator {
+    display: none;
+  }
+
+  .partner {
+    height: auto;
+    h3 {
+      font-size: 12px;
+    }
+    img {
+      width: 40px;
+      filter: brightness(80%);
+    }
+  }
+
+  .reviews {
+    img {
+      width: 100px;
+    }
+  }
+
+  .reviews-container .reviews .reviews_text {
+    padding: 20px 20px;
+
+    p {
+      font-size: 10px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+  }
+
+  .gallery_section {
+    height: 400px;
+  }
+  .gallery_section .map {
+    top: 0%;
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+  }
+
+  .gallery_section .gallery {
+    gap: 20px;
+  }
+
+  .benefits_section {
+    height: auto;
+  }
+
+  .benefits_section .benefits_img {
+    display: none;
+  }
+
+  .benefits_section .benefits_details {
+    width: 370px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .benefits_section .benefits_details .head-text {
+    width: 100%;
+  }
+
+  .benefits_section .benefits_details .head-text h3 {
+    font-size: 12px;
+  }
+
+  .benefits_section .benefits_details .head-text h2 {
+    font-size: 18px;
+  }
+
+  .benefits_section .other-text {
+    z-index: 1;
+    width: 500px;
+    width: 100%;
+  }
+
+  .benefits_section .other-text p {
+    font-size: 12px;
+  }
+
+  .benefits-list img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .benefits_section .benefits-list .list-details h3 {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .benefits_section .benefits-list .list-details p {
+    font-size: 10px;
+    font-weight: normal;
+    color: #9fa4b7;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust gap between elements */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px;
+  }
+
+  .footer-details {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 350px; /* Limit maximum width for smaller screens */
+  }
+
+  .footer-content .footer-link {
+    height: auto;
+    gap: 10px;
+  }
+
+  .footer-content .footer-link .footer_links {
+    margin-top: 0;
+  }
+
+  .footer-content .footer-link .footer_links .link_item {
+    padding: 10px;
+  }
+
+  .footer-link,
+  .subscribe {
+    width: 100%; /* Make these sections full width */
+  }
+
+  .footer-bottom {
+    height: 80px; /* Adjust height of footer bottom for smaller screens */
+  }
+
+  .footer-bottom .copy-right {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements */
+    justify-content: flex-start;
+    gap: 10px; /* Adjust gap between elements */
+    text-align: center; /* Center align text */
+  }
+
+  .footer-bottom .copy-right p {
+    margin-left: 0;
+  }
+
+  .red-arrow {
+    width: 100%; /* Make red arrow full width */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .footer-bottom .copy-right img {
+    width: 25px; /* Adjust size of social media icons */
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+  .main-header {
+    min-height: 50px; /* Adjust height for smaller screens */
+    width: auto;
+
+    .blue-header {
+      height: 30px; /* Adjust height for smaller screens */
+      flex-direction: row; /* Stack items vertically for smaller screens */
+      gap: 10px; /* Adjust gap between items for smaller screens */
+      padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .detail {
+      min-width: 70%;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone {
+      font-size: 9px; /* Adjust font size for smaller screens */
+      gap: 5px;
+      img {
+        height: 15px;
+      }
+    }
+
+    .icon-btn {
+      .icons {
+        display: none;
+      }
+      gap: 4px; /* Adjust gap between items for smaller screens */
+      .funBtn {
+        display: none;
+      }
+    }
+
+    .nav {
+      margin-left: 0; /* Remove left margin for smaller screens */
+      gap: 100px; /* Adjust gap between items for smaller screens */
+      align-items: center;
+
+      .logo {
+        margin-top: 10px;
+        width: 100px;
+      }
+    }
+
+    .menu {
+      display: block;
+    }
+
+    .nav__links {
+      display: none;
+    }
+  }
+
+  .slider {
+    height: auto; /* Set slider height to auto */
+  }
+
+  .slider_img {
+    height: 100%; /* Set slider image height to 100% */
+  }
+
+  .hero_text {
+    top: 40%;
+    width: 100%;
+
+    .head {
+      width: 100%;
+      font-size: 50px;
+      height: 70px;
+    }
+    .sub_head {
+      font-size: 15px;
+    }
+  }
+
+  .section__description {
+    font-size: 2rem;
+  }
+
+  .section__header {
+    font-size: 1.5rem;
+  }
+
+  .section__title p {
+    font-size: 0.8rem;
+  }
+
+  .margin-top span {
+    font-size: 10px;
+  }
+
+  .margin-top button {
+    color: white;
+    padding: 10px 10px;
+    background-color: #f60515;
+    border-radius: 8px;
+    width: 100px;
+    height: 29px;
+    border-style: none;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: normal;
+  }
+  .section__img {
+    display: none;
+  }
+
+  .offerings-img {
+    margin: auto;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
+    gap: 10px;
+    width: auto;
+  }
+
+  .card-container {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  .dots-container {
+    margin-top: 10px;
+  }
+  .dots {
+    width: 10px;
+    height: 10px;
+  }
+  .dots-active {
+    width: 8px;
+    height: 8px;
+  }
+
+  .welcome-img {
+    display: none;
+  }
+
+  .welcome-text {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  .seperator {
+    display: none;
+  }
+
+  .partner {
+    height: auto;
+    h3 {
+      font-size: 12px;
+    }
+    img {
+      width: 40px;
+      filter: brightness(80%);
+    }
+  }
+
+  .reviews {
+    img {
+      width: 100px;
+    }
+  }
+
+  .reviews-container .reviews .reviews_text {
+    padding: 20px 20px;
+
+    p {
+      font-size: 10px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+  }
+
+  .gallery_section {
+    height: 400px;
+  }
+  .gallery_section .map {
+    top: 0%;
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+  }
+
+  .gallery_section .gallery {
+    gap: 20px;
+  }
+
+  .benefits_section {
+    height: auto;
+  }
+
+  .benefits_section .benefits_img {
+    display: none;
+  }
+
+  .benefits_section .benefits_details {
+    width: 370px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .benefits_section .benefits_details .head-text {
+    width: 100%;
+  }
+
+  .benefits_section .benefits_details .head-text h3 {
+    font-size: 12px;
+  }
+
+  .benefits_section .benefits_details .head-text h2 {
+    font-size: 18px;
+  }
+
+  .benefits_section .other-text {
+    z-index: 1;
+    width: 500px;
+    width: 100%;
+  }
+
+  .benefits_section .other-text p {
+    font-size: 12px;
+  }
+
+  .benefits-list img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .benefits_section .benefits-list .list-details h3 {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .benefits_section .benefits-list .list-details p {
+    font-size: 10px;
+    font-weight: normal;
+    color: #9fa4b7;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust gap between elements */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px;
+  }
+
+  .footer-details {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 350px; /* Limit maximum width for smaller screens */
+  }
+
+  .footer-content .footer-link {
+    height: auto;
+    gap: 10px;
+  }
+
+  .footer-content .footer-link .footer_links {
+    margin-top: 0;
+  }
+
+  .footer-content .footer-link .footer_links .link_item {
+    padding: 10px;
+  }
+
+  .footer-link,
+  .subscribe {
+    width: 100%; /* Make these sections full width */
+  }
+
+  .footer-bottom {
+    height: 80px; /* Adjust height of footer bottom for smaller screens */
+  }
+
+  .footer-bottom .copy-right {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements */
+    justify-content: flex-start;
+    gap: 10px; /* Adjust gap between elements */
+    text-align: center; /* Center align text */
+  }
+
+  .footer-bottom .copy-right p {
+    margin-left: 0;
+  }
+
+  .red-arrow {
+    width: 100%; /* Make red arrow full width */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .footer-bottom .copy-right img {
+    width: 25px; /* Adjust size of social media icons */
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 430px) and (max-height: 932px) {
+  .main-header {
+    min-height: 50px; /* Adjust height for smaller screens */
+    width: auto;
+
+    .blue-header {
+      height: 30px; /* Adjust height for smaller screens */
+      flex-direction: row; /* Stack items vertically for smaller screens */
+      gap: 10px; /* Adjust gap between items for smaller screens */
+      padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .detail {
+      min-width: 70%;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone {
+      font-size: 9px; /* Adjust font size for smaller screens */
+      gap: 5px;
+      img {
+        height: 15px;
+      }
+    }
+
+    .icon-btn {
+      .icons {
+        display: none;
+      }
+      gap: 4px; /* Adjust gap between items for smaller screens */
+      .funBtn {
+        display: none;
+      }
+    }
+
+    .nav {
+      margin-left: 0; /* Remove left margin for smaller screens */
+      gap: 100px; /* Adjust gap between items for smaller screens */
+      align-items: center;
+
+      .logo {
+        margin-top: 10px;
+        width: 100px;
+      }
+    }
+
+    .menu {
+      display: block;
+    }
+
+    .nav__links {
+      display: none;
+    }
+  }
+
+  .slider {
+    height: auto; /* Set slider height to auto */
+  }
+
+  .slider_img {
+    height: 100%; /* Set slider image height to 100% */
+  }
+
+  .hero_text {
+    top: 40%;
+    width: 100%;
+
+    .head {
+      width: 100%;
+      font-size: 50px;
+      height: 70px;
+    }
+    .sub_head {
+      font-size: 15px;
+    }
+  }
+
+  .section__description {
+    font-size: 2rem;
+  }
+
+  .section__header {
+    font-size: 1.5rem;
+  }
+
+  .section__title p {
+    font-size: 0.8rem;
+  }
+
+  .margin-top span {
+    font-size: 10px;
+  }
+
+  .margin-top button {
+    color: white;
+    padding: 10px 10px;
+    background-color: #f60515;
+    border-radius: 8px;
+    width: 100px;
+    height: 29px;
+    border-style: none;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: normal;
+  }
+  .section__img {
+    display: none;
+  }
+
+  .offerings-img {
+    margin: auto;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
+    gap: 10px;
+    width: auto;
+  }
+
+  .card-container {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  .dots-container {
+    margin-top: 10px;
+  }
+  .dots {
+    width: 10px;
+    height: 10px;
+  }
+  .dots-active {
+    width: 8px;
+    height: 8px;
+  }
+
+  .welcome-img {
+    display: none;
+  }
+
+  .welcome-text {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  .seperator {
+    display: none;
+  }
+
+  .partner {
+    height: auto;
+    h3 {
+      font-size: 12px;
+    }
+    img {
+      width: 40px;
+      filter: brightness(80%);
+    }
+  }
+
+  .reviews {
+    img {
+      width: 100px;
+    }
+  }
+
+  .reviews-container .reviews .reviews_text {
+    padding: 20px 20px;
+
+    p {
+      font-size: 10px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+  }
+
+  .gallery_section {
+    height: 400px;
+  }
+  .gallery_section .map {
+    top: 0%;
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+  }
+
+  .gallery_section .gallery {
+    gap: 20px;
+  }
+
+  .benefits_section {
+    height: auto;
+  }
+
+  .benefits_section .benefits_img {
+    display: none;
+  }
+
+  .benefits_section .benefits_details {
+    width: 370px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .benefits_section .benefits_details .head-text {
+    width: 100%;
+  }
+
+  .benefits_section .benefits_details .head-text h3 {
+    font-size: 12px;
+  }
+
+  .benefits_section .benefits_details .head-text h2 {
+    font-size: 18px;
+  }
+
+  .benefits_section .other-text {
+    z-index: 1;
+    width: 500px;
+    width: 100%;
+  }
+
+  .benefits_section .other-text p {
+    font-size: 12px;
+  }
+
+  .benefits-list img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .benefits_section .benefits-list .list-details h3 {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .benefits_section .benefits-list .list-details p {
+    font-size: 10px;
+    font-weight: normal;
+    color: #9fa4b7;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust gap between elements */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px;
+  }
+
+  .footer-details {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 350px; /* Limit maximum width for smaller screens */
+  }
+
+  .footer-content .footer-link {
+    height: auto;
+    gap: 10px;
+  }
+
+  .footer-content .footer-link .footer_links {
+    margin-top: 0;
+  }
+
+  .footer-content .footer-link .footer_links .link_item {
+    padding: 10px;
+  }
+
+  .footer-link,
+  .subscribe {
+    width: 100%; /* Make these sections full width */
+  }
+
+  .footer-bottom {
+    height: 80px; /* Adjust height of footer bottom for smaller screens */
+  }
+
+  .footer-bottom .copy-right {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements */
+    justify-content: flex-start;
+    gap: 10px; /* Adjust gap between elements */
+    text-align: center; /* Center align text */
+  }
+
+  .footer-bottom .copy-right p {
+    margin-left: 0;
+  }
+
+  .red-arrow {
+    width: 100%; /* Make red arrow full width */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .footer-bottom .copy-right img {
+    width: 25px; /* Adjust size of social media icons */
+    height: 25px;
   }
 }
