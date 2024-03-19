@@ -2272,3 +2272,161 @@ body {
     height: 25px;
   }
 }
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .benefits_section .benefits_details {
+    width: 360px;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .welcome-section {
+    gap: 40px;
+    height: auto;
+  }
+
+  .welcome-section .welcome-img {
+    margin-top: 25px;
+    width: 450px;
+    height: 200px;
+  }
+
+  .welcome-section .seperator {
+    height: 350px;
+  }
+
+  .welcome-text {
+    margin-top: 0;
+    height: auto;
+    padding: 15px;
+  }
+  .welcome-text h3 {
+    font-size: 20px;
+  }
+
+  .welcome-text p {
+    font-size: 10px;
+  }
+
+  .partner {
+    height: auto;
+  }
+
+  .partner h3 {
+    font-size: 18px;
+  }
+  .partner img {
+    filter: brightness(80%);
+    height: 50px;
+  }
+
+  .reviews-container .reviews .reviews_text {
+    height: auto;
+    padding: 20px 20px;
+  }
+
+  .reviews-container .reviews img {
+    width: 150px;
+  }
+
+  .reviews-container .reviews .reviews_text p {
+    font-size: 10px;
+  }
+
+  .benefits_section {
+    height: 550px;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .benefits_section .benefits_img {
+    width: 350px;
+  }
+
+  .benefits_section .benefits_details {
+    width: 400px;
+    gap: 30px;
+  }
+  .benefits_section .benefits_details .head-text {
+    width: 100%;
+  }
+  .benefits_section .benefits_details .head-text h3 {
+    font-size: 18px;
+  }
+  .benefits_section .benefits_details .head-text h2 {
+    font-size: 22px;
+  }
+
+  .benefits_section .other-text {
+    width: 100%;
+  }
+
+  .benefits_section .other-text p {
+    font-size: 14px;
+  }
+
+  .benefits_section .benefits-list {
+    gap: 20px;
+  }
+
+  .benefits_section .benefits-list img {
+    height: 50px;
+  }
+
+  .benefits_section .benefits-list .list-details h3 {
+    font-size: 16px;
+  }
+  .benefits_section .benefits-list .list-details p {
+    font-size: 14px;
+  }
+
+  .footer .footer-content {
+    gap: 20px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .footer-content .footer-details {
+    width: 250px;
+  }
+
+  .footer-content .footer-details p {
+    font-size: 12px;
+  }
+
+  .footer-content .footer-details .contact-details .detail1 span {
+    font-size: 12px;
+  }
+
+  .footer-content .footer-link h3 {
+    font-size: 18px;
+  }
+
+  .footer-content .footer-link {
+    gap: 10px;
+    height: auto;
+  }
+
+  .footer-content .footer-link .footer_links .link_item {
+    padding: 3px;
+  }
+  .footer-content .footer-link .footer_links a {
+    font-size: 12px;
+    line-height: 3px;
+  }
+  .footer .footer-content .subscribe input {
+    width: 200px;
+    height: 40px;
+  }
+  .footer .footer-content .subscribe button {
+    width: 200px;
+    height: 40px;
+  }
+
+  .footer-bottom {
+    width: 90%;
+    height: 60px;
+  }
+}
