@@ -43,4 +43,17 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(() => {
     goToSlide(currentSlide + 1);
   }, 4000);
+
+  const menuButton = document.querySelector(".menu");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const closeBtn = document.querySelector(".close-btn");
+
+  // Toggle the active class on the mobile menu when the menu button is clicked
+  menuButton.addEventListener("click", function () {
+    mobileMenu.classList.toggle("active");
+  });
+
+  closeBtn.addEventListener("click", (e) => {
+    mobileMenu.classList.toggle("active");
+  });
 });
