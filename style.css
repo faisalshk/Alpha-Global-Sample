@@ -153,24 +153,45 @@ body {
 
 .slider {
   width: 100%; /* Ensure the slider container takes up the full width of its parent */
-  overflow: hidden; /* Ensure the image doesn't overflow its container */
-  position: relative;
-  text-align: center;
   height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.slider .slider_img {
-  width: 100%; /* Set the width of the image to 100% of its container */
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /* THIS creates the animation! */
+  transition: 400ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.active--slide {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.slide .slider_img {
   height: 100%; /* Maintain the aspect ratio of the image */
+  width: 100%;
   filter: brightness(30%);
   object-fit: cover;
+  object-position: center;
 }
 
 .arrow {
   position: absolute; /* Position the arrows relative to the slider container */
   top: 50%; /* Center vertically */
   transform: translateY(-50%); /* Adjust vertically to center */
-  z-index: 1;
+  z-index: 2;
   width: 20px; /* Adjust the width as needed */
   height: auto; /* Let the height adjust proportionally */
   margin: 0 20px;
@@ -187,12 +208,15 @@ body {
 .hero_text {
   z-index: 1;
   position: absolute;
-  top: 50%; /* Center vertically */
+  top: 40%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(
     -50%,
     -50%
   ); /* Center the element both horizontally and vertically */
+  opacity: 0;
+  transition: 300ms opacity ease-in-out;
+  transition-delay: 200ms;
 }
 
 .head {
@@ -211,7 +235,6 @@ body {
 /* plan your trip section */
 .section {
   padding: 4rem 2rem;
-  /* border-top: 1px solid #ddd; */
   transition: transform 1s, opacity 1s;
 }
 
@@ -506,6 +529,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  overflow: hidden;
 }
 
 .reviews {
@@ -1315,6 +1339,171 @@ body {
   }
 }
 
+@media screen and (max-width: 912px) and (max-height: 1368px) {
+  .detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    height: 44px;
+    margin-left: 10px;
+    padding: 5px;
+  }
+  .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 75px;
+    width: auto;
+    margin-left: 10px;
+    gap: 100px;
+  }
+
+  .section__img {
+    width: 400px;
+    height: 400px;
+  }
+  .section__img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .check_list_desc {
+    color: #0169c8;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .welcome-section {
+    width: 100%;
+    height: auto;
+    background-color: #0169c8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .welcome-img {
+    margin-top: 60px;
+    margin-left: 50px;
+    width: 500px;
+    height: 250px;
+    position: relative;
+  }
+
+  .welcome-text h3 {
+    letter-spacing: 2px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .welcome-text p {
+    color: #b1b1b1;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+  }
+  .seperator {
+    margin-top: 0;
+  }
+
+  .partner {
+    height: auto;
+  }
+
+  .reviews {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .reviews .reviews_text p {
+    font-size: 14px;
+    font-weight: normal;
+    color: #787780;
+  }
+
+  .reviews img {
+    height: 150px;
+  }
+
+  .benefits_section .benefits_img img {
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 8px 0 0;
+  }
+
+  .benefits_section .benefits_details {
+    margin-top: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 500px;
+  }
+
+  .footer {
+    width: auto;
+    height: auto;
+    background-color: #e5f7f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .footer-content .subscribe input {
+    width: 300px;
+    height: 45px;
+    background-color: #292837;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+  }
+
+  .footer-content .subscribe button {
+    width: 300px;
+    height: 45px;
+  }
+
+  .footer-content {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .footer-content .footer-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    gap: 5px;
+  }
+
+  .footer-content .footer-link .footer_links .link_item {
+    padding: 0px 10px;
+  }
+}
+
 /* Existing CSS styles */
 
 /* Media query for responsiveness */
@@ -1323,6 +1512,7 @@ body {
   .main-header {
     min-height: 50px; /* Adjust height for smaller screens */
     width: auto;
+    height: auto;
 
     .blue-header {
       height: 30px; /* Adjust height for smaller screens */
@@ -1577,6 +1767,13 @@ body {
     font-size: 10px;
     font-weight: normal;
     color: #9fa4b7;
+  }
+
+  .footer {
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: baseline;
+    height: auto;
   }
 
   .footer-content {
@@ -1624,6 +1821,7 @@ body {
 
   .footer-bottom .copy-right p {
     margin-left: 0;
+    font-size: 12px;
   }
 
   .red-arrow {
@@ -1641,6 +1839,7 @@ body {
   .main-header {
     min-height: 50px; /* Adjust height for smaller screens */
     width: auto;
+    height: auto;
 
     .blue-header {
       height: 30px; /* Adjust height for smaller screens */
@@ -1895,6 +2094,13 @@ body {
     font-size: 10px;
     font-weight: normal;
     color: #9fa4b7;
+  }
+
+  .footer {
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: baseline;
+    height: auto;
   }
 
   .footer-content {
@@ -1959,6 +2165,7 @@ body {
   .main-header {
     min-height: 50px; /* Adjust height for smaller screens */
     width: auto;
+    height: auto;
 
     .blue-header {
       height: 30px; /* Adjust height for smaller screens */
@@ -2014,7 +2221,7 @@ body {
   }
 
   .slider {
-    height: auto; /* Set slider height to auto */
+    height: 30%; /* Set slider height to auto */
   }
 
   .slider_img {
@@ -2213,6 +2420,13 @@ body {
     font-size: 10px;
     font-weight: normal;
     color: #9fa4b7;
+  }
+
+  .footer {
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: baseline;
+    height: auto;
   }
 
   .footer-content {
@@ -2282,6 +2496,12 @@ body {
 }
 
 @media screen and (max-width: 768px) and (max-height: 1024px) {
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
   .welcome-section {
     gap: 40px;
     height: auto;
@@ -2346,8 +2566,8 @@ body {
   }
 
   .benefits_section .benefits_details {
-    width: 400px;
-    gap: 30px;
+    gap: 20px;
+    width: 360px;
   }
   .benefits_section .benefits_details .head-text {
     width: 100%;

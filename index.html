@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Island+Moments&family=Poppins:wght@300&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -74,21 +75,50 @@
     </header>
 
     <!-- hero section -->
-    <div class="slider">
-      <img class="slider_img" src="./assets/slider1.jpg" alt="slider1" />
+    <div class="slider" data-slide>
+      <!-- slide-1 -->
+      <div class="slide active--slide">
+        <img class="slider_img" src="./assets/slider1.jpg" alt="slider1" />
+        <div class="hero_text">
+          <h1 class="head island-moments-regular">Travel & Adventure</h1>
+          <p class="sub_head my-custom-font">Where do you want to go ?</p>
+        </div>
+      </div>
 
-      <!-- SVG content -->
-      <img class="arrow left" src="./assets/left_arrow.svg" alt="left_arrow" />
+      <!-- slide-2 -->
+      <div class="slide">
+        <img class="slider_img" src="./assets/offerings_1.jpg" alt="slider2" />
+        <div class="hero_text">
+          <h1 class="head island-moments-regular">Explore Nature</h1>
+          <p class="sub_head my-custom-font">
+            Discover the beauty of the world
+          </p>
+        </div>
+      </div>
+
+      <!-- slide-3 -->
+      <div class="slide">
+        <img class="slider_img" src="./assets/offerings_3.jpeg" alt="slider3" />
+        <div class="hero_text">
+          <h1 class="head island-moments-regular">Adventure Awaits</h1>
+          <p class="sub_head my-custom-font">Find your next thrill</p>
+        </div>
+      </div>
+      <!-- arrow -->
+      <img
+        class="arrow left"
+        src="./assets/left_arrow.svg"
+        alt="left_arrow"
+        data-arrow-button="prev"
+      />
       <img
         class="arrow right"
         src="./assets/right_arrow.svg"
         alt="right_arrow"
+        data-arrow-button="next"
       />
-      <div class="hero_text">
-        <h1 class="head island-moments-regular">Travel & Adventure</h1>
-        <p class="sub_head my-custom-font">Where do you want to go ?</p>
-      </div>
     </div>
+
     <!-- plan your trip section -->
     <section class="section flex">
       <div class="section__img">
@@ -219,6 +249,82 @@
           </div>
         </div>
         <!-- card-5 -->
+        <div class="card">
+          <img src="./assets/offerings_1.jpg" alt="tours" />
+          <div class="card-details">
+            <p class="my-custom-font">🔆 8.0 Superb</p>
+            <h2 class="my-custom-font">Corporate Tour</h2>
+            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
+
+            <div class="card-sub-details">
+              <p class="my-custom-font">3 DAYS</p>
+              <p class="my-custom-font">12+</p>
+              <p class="my-custom-font">LOS ANGELES</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- card-6 -->
+        <div class="card">
+          <img src="./assets/offerings_1.jpg" alt="tours" />
+          <div class="card-details">
+            <p class="my-custom-font">🔆 8.0 Superb</p>
+            <h2 class="my-custom-font">Corporate Tour</h2>
+            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
+
+            <div class="card-sub-details">
+              <p class="my-custom-font">3 DAYS</p>
+              <p class="my-custom-font">12+</p>
+              <p class="my-custom-font">LOS ANGELES</p>
+            </div>
+          </div>
+        </div>
+        <!-- card-7 -->
+        <div class="card">
+          <img src="./assets/offerings_1.jpg" alt="tours" />
+          <div class="card-details">
+            <p class="my-custom-font">🔆 8.0 Superb</p>
+            <h2 class="my-custom-font">Corporate Tour</h2>
+            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
+
+            <div class="card-sub-details">
+              <p class="my-custom-font">3 DAYS</p>
+              <p class="my-custom-font">12+</p>
+              <p class="my-custom-font">LOS ANGELES</p>
+            </div>
+          </div>
+        </div>
+        <!-- card-8 -->
+        <div class="card">
+          <img src="./assets/offerings_1.jpg" alt="tours" />
+          <div class="card-details">
+            <p class="my-custom-font">🔆 8.0 Superb</p>
+            <h2 class="my-custom-font">Corporate Tour</h2>
+            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
+
+            <div class="card-sub-details">
+              <p class="my-custom-font">3 DAYS</p>
+              <p class="my-custom-font">12+</p>
+              <p class="my-custom-font">LOS ANGELES</p>
+            </div>
+          </div>
+        </div>
+        <!-- card-9 -->
+        <div class="card">
+          <img src="./assets/offerings_1.jpg" alt="tours" />
+          <div class="card-details">
+            <p class="my-custom-font">🔆 8.0 Superb</p>
+            <h2 class="my-custom-font">Corporate Tour</h2>
+            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
+
+            <div class="card-sub-details">
+              <p class="my-custom-font">3 DAYS</p>
+              <p class="my-custom-font">12+</p>
+              <p class="my-custom-font">LOS ANGELES</p>
+            </div>
+          </div>
+        </div>
+        <!-- card-10 -->
         <div class="card">
           <img src="./assets/offerings_1.jpg" alt="tours" />
           <div class="card-details">
