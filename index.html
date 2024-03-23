@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Island+Moments&family=Poppins:wght@300&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -165,17 +169,75 @@
         <h1 class="section__header my-custom-font font">Go fun Places</h1>
       </div>
       <div class="offerings-img">
+        <!-- offerings-1 -->
         <div class="img-div">
           <img src="./assets/offerings_1.jpg" alt="offerings_1" />
+          <div class="card-body">
+            <h1 class="card-title island-moments-regular">Corporate Tours</h1>
+            <p class="card-sub-title my-custom-font">To Dubai</p>
+            <p class="card-info my-custom-font">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rem
+              ullam aliquam quam quos? Ex unde tempora et eaque quam officiis
+              quod aspernatur. Esse expedita ipsa adipisci facilis? Veniam,
+              odio!
+            </p>
+            <button class="card-btn my-custom-font" type="button">
+              Book Tour
+            </button>
+          </div>
         </div>
+        <!-- offerings-2 -->
         <div class="img-div">
           <img src="./assets/offerings_2.jpg" alt="offerings_1" />
+          <div class="card-body">
+            <h1 class="card-title island-moments-regular">Family Tours</h1>
+            <p class="card-sub-title my-custom-font">To Bali</p>
+            <p class="card-info my-custom-font">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rem
+              ullam aliquam quam quos? Ex unde tempora et eaque quam officiis
+              quod aspernatur. Esse expedita ipsa adipisci facilis? Veniam,
+              odio!
+            </p>
+            <button class="card-btn my-custom-font" type="button">
+              Book Tour
+            </button>
+          </div>
         </div>
+
+        <!-- offerings-3 -->
         <div class="img-div">
           <img src="./assets/offerings_3.jpeg" alt="offerings_1" />
+          <div class="card-body">
+            <h1 class="card-title island-moments-regular">Group Tours</h1>
+            <p class="card-sub-title my-custom-font">To Switzerland</p>
+            <p class="card-info my-custom-font">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rem
+              ullam aliquam quam quos? Ex unde tempora et eaque quam officiis
+              quod aspernatur. Esse expedita ipsa adipisci facilis? Veniam,
+              odio!
+            </p>
+            <button class="card-btn my-custom-font" type="button">
+              Book Tour
+            </button>
+          </div>
         </div>
+
+        <!-- offerings-4 -->
         <div class="img-div">
           <img src="./assets/offerings_4.jpg" alt="offerings_1" />
+          <div class="card-body">
+            <h1 class="card-title island-moments-regular">Solo Tours</h1>
+            <p class="card-sub-title my-custom-font">To Veitnam</p>
+            <p class="card-info my-custom-font">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rem
+              ullam aliquam quam quos? Ex unde tempora et eaque quam officiis
+              quod aspernatur. Esse expedita ipsa adipisci facilis? Veniam,
+              odio!
+            </p>
+            <button class="card-btn my-custom-font" type="button">
+              Book Tour
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -187,160 +249,86 @@
         <h1 class="section__header my-custom-font font">Most popular tours</h1>
       </div>
 
-      <div class="card-container">
-        <!-- card-one -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
+      <div class="wrapper">
+        <i id="left"><img src="./assets/left_arrow.svg" alt="left arrow" /></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img">
+              <img src="./assets/agra_1.jpg" alt="img" draggable="false" />
             </div>
-          </div>
-        </div>
-        <!-- card-2 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
+            <h2 class="my-custom-font font1">Taj Mahal</h2>
+            <span class="my-custom-font"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              voluptatum tenetur laborum dolorum laboriosam pariatur aspernatur
+              debitis accusamus dicta harum consequatur sapiente quos deserunt
+              temporibus, obcaecati molestias. Amet, adipisci fugit?</span
+            >
+          </li>
+          <li class="card">
+            <div class="img">
+              <img src="./assets/agra_1.jpg" alt="img" draggable="false" />
             </div>
-          </div>
-        </div>
-        <!-- card-3 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
+            <h2 class="my-custom-font font1">Taj Mahal</h2>
+            <span class="my-custom-font"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              voluptatum tenetur laborum dolorum laboriosam pariatur aspernatur
+              debitis accusamus dicta harum consequatur sapiente quos deserunt
+              temporibus, obcaecati molestias. Amet, adipisci fugit?</span
+            >
+          </li>
+          <li class="card">
+            <div class="img">
+              <img src="./assets/agra_1.jpg" alt="img" draggable="false" />
             </div>
-          </div>
-        </div>
-        <!-- card-4 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
+            <h2 class="my-custom-font font1">Taj Mahal</h2>
+            <span class="my-custom-font"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              voluptatum tenetur laborum dolorum laboriosam pariatur aspernatur
+              debitis accusamus dicta harum consequatur sapiente quos deserunt
+              temporibus, obcaecati molestias. Amet, adipisci fugit?</span
+            >
+          </li>
+          <li class="card">
+            <div class="img">
+              <img src="./assets/agra_1.jpg" alt="img" draggable="false" />
             </div>
-          </div>
-        </div>
-        <!-- card-5 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
+            <h2 class="my-custom-font font1">Taj Mahal</h2>
+            <span class="my-custom-font"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              voluptatum tenetur laborum dolorum laboriosam pariatur aspernatur
+              debitis accusamus dicta harum consequatur sapiente quos deserunt
+              temporibus, obcaecati molestias. Amet, adipisci fugit?</span
+            >
+          </li>
+          <li class="card">
+            <div class="img">
+              <img src="./assets/agra_1.jpg" alt="img" draggable="false" />
             </div>
-          </div>
-        </div>
-
-        <!-- card-6 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
+            <h2 class="my-custom-font font1">Taj Mahal</h2>
+            <span class="my-custom-font"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              voluptatum tenetur laborum dolorum laboriosam pariatur aspernatur
+              debitis accusamus dicta harum consequatur sapiente quos deserunt
+              temporibus, obcaecati molestias. Amet, adipisci fugit?</span
+            >
+          </li>
+          <li class="card">
+            <div class="img">
+              <img src="./assets/agra_1.jpg" alt="img" draggable="false" />
             </div>
-          </div>
-        </div>
-        <!-- card-7 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
-            </div>
-          </div>
-        </div>
-        <!-- card-8 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
-            </div>
-          </div>
-        </div>
-        <!-- card-9 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
-            </div>
-          </div>
-        </div>
-        <!-- card-10 -->
-        <div class="card">
-          <img src="./assets/offerings_1.jpg" alt="tours" />
-          <div class="card-details">
-            <p class="my-custom-font">🔆 8.0 Superb</p>
-            <h2 class="my-custom-font">Corporate Tour</h2>
-            <p class="my-custom-font"><span>$1850 </span>/ Per Person</p>
-
-            <div class="card-sub-details">
-              <p class="my-custom-font">3 DAYS</p>
-              <p class="my-custom-font">12+</p>
-              <p class="my-custom-font">LOS ANGELES</p>
-            </div>
-          </div>
-        </div>
+            <h2 class="my-custom-font font1">Taj Mahal</h2>
+            <span class="my-custom-font"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+              voluptatum tenetur laborum dolorum laboriosam pariatur aspernatur
+              debitis accusamus dicta harum consequatur sapiente quos deserunt
+              temporibus, obcaecati molestias. Amet, adipisci fugit?</span
+            >
+          </li>
+        </ul>
+        <i id="right"
+          ><img src="./assets/right_arrow.svg" alt="right arrow"
+        /></i>
       </div>
-
       <!-- active dots -->
       <div class="dots-container">
         <div class="dots dots-active"></div>
@@ -404,56 +392,139 @@
         <h3 class="section__header my-custom-font">What are they saying</h3>
       </div>
       <!-- review-1 -->
-      <div class="reviews-container">
-        <div class="reviews">
-          <img src="./assets/Review_img.png" alt="reviews" />
-          <div class="reviews_text">
+      <div class="wrapper">
+        <!-- <i id="left" class="fa-solid fa-angle-left"></i> -->
+        <ul class="carousel-review">
+          <li class="card-review">
+            <div class="img">
+              <img src="./assets/Review_img.png" alt="img" draggable="false" />
+            </div>
             <span> ⭐⭐⭐⭐⭐ </span>
-            <p class="my-custom-font">
-              This is due to their best service, pricing and customer support.
-              It’s throughly refresing to such a personal touch. Duis aute irure
-              lupsum reprehenderit.
-            </p>
-            <h3 class="my-custom-font">Shirley Smith</h3>
-            <h4 class="my-custom-font">COUSTOMER</h4>
-          </div>
-        </div>
-
-        <!-- review-2 -->
-        <div class="reviews">
-          <img src="./assets/Review_img.png" alt="reviews" />
-          <div class="reviews_text">
+            <h2>Blanche Pearson</h2>
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit velit corporis quos suscipit quam accusamus
+              repellendus excepturi consectetur impedit, non repellat et fuga
+              ut! Voluptate corporis veniam asperiores eveniet cumque.</span
+            >
+          </li>
+          <li class="card-review">
+            <div class="img">
+              <img src="./assets/Review_img.png" alt="img" draggable="false" />
+            </div>
             <span> ⭐⭐⭐⭐⭐ </span>
-            <p class="my-custom-font">
-              This is due to their best service, pricing and customer support.
-              It’s throughly refresing to such a personal touch. Duis aute irure
-              lupsum reprehenderit.
-            </p>
-            <h3 class="my-custom-font">Shirley Smith</h3>
-            <h4 class="my-custom-font">COUSTOMER</h4>
-          </div>
-        </div>
-
-        <!-- review-3 -->
-        <div class="reviews">
-          <img src="./assets/Review_img.png" alt="reviews" />
-          <div class="reviews_text">
+            <h2>Joenas Brauers</h2>
+            <span
+              >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              dolorem impedit quibusdam, corporis rem nihil deserunt voluptatem
+              voluptate ex distinctio voluptates amet iure veritatis minus odit
+              porro nisi numquam quis.</span
+            >
+          </li>
+          <li class="card-review">
+            <div class="img">
+              <img src="./assets/Review_img.png" alt="img" draggable="false" />
+            </div>
             <span> ⭐⭐⭐⭐⭐ </span>
-            <p class="my-custom-font">
-              This is due to their best service, pricing and customer support.
-              It’s throughly refresing to such a personal touch. Duis aute irure
-              lupsum reprehenderit.
-            </p>
-            <h3 class="my-custom-font">Shirley Smith</h3>
-            <h4 class="my-custom-font">COUSTOMER</h4>
-          </div>
-        </div>
+            <h2>Lariach French</h2>
+            <span
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Eligendi optio ut architecto commodi quaerat dicta ad enim eaque
+              fugiat beatae doloribus, consequatur fuga qui voluptates cum
+              quisquam, aliquid delectus recusandae.</span
+            >
+          </li>
+          <li class="card-review">
+            <div class="img">
+              <img src="./assets/Review_img.png" alt="img" draggable="false" />
+            </div>
+            <span> ⭐⭐⭐⭐⭐ </span>
+            <h2>James Khosravi</h2>
+            <span
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Delectus est nisi nulla, quas repellat blanditiis in sequi esse
+              recusandae architecto laboriosam iure distinctio consectetur
+              asperiores aut minus ad ut necessitatibus.</span
+            >
+          </li>
+          <li class="card-review">
+            <div class="img">
+              <img src="./assets/Review_img.png" alt="img" draggable="false" />
+            </div>
+            <span> ⭐⭐⭐⭐⭐ </span>
+            <h2>Kristina Zasiadko</h2>
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+              aliquam? Pariatur, illo voluptate inventore fuga reiciendis
+              veritatis ad, voluptatum ducimus ullam delectus, deserunt laborum
+              dicta voluptas non et illum enim!</span
+            >
+          </li>
+          <li class="card-review">
+            <div class="img">
+              <img src="./assets/Review_img.png" alt="img" draggable="false" />
+            </div>
+            <span> ⭐⭐⭐⭐⭐ </span>
+            <h2>Donald Horton</h2>
+            <span
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+              nihil hic, iste odit voluptatibus, corporis esse amet animi porro
+              illo sint, praesentium laborum iure obcaecati voluptatum? Iste eos
+              quod officia!</span
+            >
+          </li>
+        </ul>
+        <!-- <i id="right" class="fa-solid fa-angle-right"></i> -->
       </div>
-      <div class="dots-container">
+
+      <!-- <div class="reviews-container">
+        <div class="reviews">
+          <img src="./assets/Review_img.png" alt="reviews" />
+          <div class="reviews_text">
+            <span> ⭐⭐⭐⭐⭐ </span>
+            <p class="my-custom-font">
+              This is due to their best service, pricing and customer support.
+              It’s throughly refresing to such a personal touch. Duis aute irure
+              lupsum reprehenderit.
+            </p>
+            <h3 class="my-custom-font">Shirley Smith</h3>
+            <h4 class="my-custom-font">COUSTOMER</h4>
+          </div>
+        </div>
+
+        <div class="reviews">
+          <img src="./assets/Review_img.png" alt="reviews" />
+          <div class="reviews_text">
+            <span> ⭐⭐⭐⭐⭐ </span>
+            <p class="my-custom-font">
+              This is due to their best service, pricing and customer support.
+              It’s throughly refresing to such a personal touch. Duis aute irure
+              lupsum reprehenderit.
+            </p>
+            <h3 class="my-custom-font">Shirley Smith</h3>
+            <h4 class="my-custom-font">COUSTOMER</h4>
+          </div>
+        </div>
+
+        <div class="reviews">
+          <img src="./assets/Review_img.png" alt="reviews" />
+          <div class="reviews_text">
+            <span> ⭐⭐⭐⭐⭐ </span>
+            <p class="my-custom-font">
+              This is due to their best service, pricing and customer support.
+              It’s throughly refresing to such a personal touch. Duis aute irure
+              lupsum reprehenderit.
+            </p>
+            <h3 class="my-custom-font">Shirley Smith</h3>
+            <h4 class="my-custom-font">COUSTOMER</h4>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="dots-container">
         <div class="dots dots-active"></div>
         <div class="dots"></div>
         <div class="dots"></div>
-      </div>
+      </div> -->
     </section>
 
     <!-- gallery -->
